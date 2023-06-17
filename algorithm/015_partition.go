@@ -5,10 +5,10 @@ package algorithm
 //大于这个数的都在右边
 //要求额外空间复杂度为O(1)，时间复杂度为O(N)
 
-func partition(arr []int, p int) {
+func Partition(arr []int, p int) []int {
 	//1.先处理边界条件
 	if arr == nil || len(arr) < 2 {
-		return
+		return arr
 	}
 	//2.less区域
 	less := -1                            //less区域一开始位于-1位置
@@ -19,5 +19,6 @@ func partition(arr []int, p int) {
 			less++ //less区右移一位
 		}
 	}
+	return arr
 
 }
